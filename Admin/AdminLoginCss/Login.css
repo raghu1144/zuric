@@ -1,0 +1,161 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #545454;
+   
+}
+
+img {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    width: 70%;
+    border: 4px solid #CD8E33;
+    /* flex: 1 1 0; */
+    height: 80vh;
+    margin: 60px auto;
+    /* margin: auto 0; */
+}
+
+.left {
+    width: 50%;
+    background-color: #fff;
+    position: relative;
+    /* background: blanchedalmond; */
+    /* border-right: 2px solid #CD8E33;
+    border-right-width: 20px; */
+    /* border-block-end: 10px solid #CD8E33;
+    padding-block-start: 10px; */
+
+
+}
+
+.forget button {
+    margin-top: 20px;
+    background: none;
+    color: black;
+   border: none;
+    font-size: 20px;
+}
+
+
+.left::before {
+    content: "";
+    /* width: 20%; */
+    position: absolute;
+    /* border-right: 1pxx solid #CD8E33; */
+    border-bottom: 10px solid #Cd8E33;
+    transform: rotate(90deg);
+    width: 85%;
+    left: 60%;
+    top: 49%;
+}
+
+
+.loginforminput input[type=text]:focus {
+    border: 2px solid #CD8E33;
+}
+
+.right {
+
+    width: 50%;
+    background: #ffff;
+}
+
+.btn button {
+    width: 100%;
+    padding: 13px 100px;
+    background: #CD8E33;
+    border-radius: -4%;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3%;
+    margin-top: 40px;
+}
+
+.loginforminput {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+    
+}
+
+
+.Login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading {
+    margin: 24px 0px;
+}
+
+
+
+.loginforminput label {
+    font-size: 25px;
+    margin: 6px 0;
+}
+
+.loginforminput input {
+    border: 2px solid #e3e3e3;
+    color: #777;
+    background: #fff;
+    font-size: 17px;
+    line-height: 28px;
+    padding: 12px 26px;
+    width: 100%;
+    /* margin-bottom: 20px; */
+    border-radius: 35px;
+    
+    outline: none;
+}
+
+/* input[type="text"] {
+    font-size: 20px;
+    height: 40px;
+    border: 1px solid grey;
+    outline: none;
+    border-radius: 5%;
+} */
+.btn button {
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    background: #CD8E33;
+    border: none;
+    padding: 15px 106px;
+    font-weight: 700;
+    border-radius: 35px;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+
+.btn button:hover {
+    transform: translateY(-3px);
+}
+.flex{
+    display: flex;
+justify-content: space-between;
+margin: -22px 26px
+/* margin: -85px 220px  */
+
+}
+.flex p a{
+    text-decoration: none;
+}
+

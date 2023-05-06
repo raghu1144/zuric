@@ -1,0 +1,88 @@
+.footer__content {
+    padding: 40px 0 60px!important;
+    background-color: transparent;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/images/dfhg.png);
+}
+
+.footer__text {
+    width: 100%;
+    letter-spacing: 4px;
+    padding: 7px!important;
+    background-color: #232735;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.footer__text {
+    width: 100%;
+    letter-spacing: 1px!important;
+    padding: 18px;
+    background-color: #232735;
+    text-align: center;
+    font-size: 12px!important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer__text span{
+    letter-spacing: 1px!important; 
+    font-size: 12px!important; 
+    font-weight: 100;
+    line-height: 1!important;}
+.logo {
+    width: 200px!important;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.footer__content {
+    padding: 0!important;
+    background-color: transparent;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+     background-size:auto!important; 
+    background-image: url(images/dfhg1.png);
+}
+
+.footer__text span{
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 2.5;
+    margin: 0 85px 0 50px;}
+
+
+    
+
+.footer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #16264c;
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+
+.footer-pre {
+    padding-top: 240px;
+    background-color: transparent;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./pm/padelturf/123498.png);
+}
+@media (min-width: 1024px){
+.block-newsletter {
+    padding-bottom: 105px;
+}
+}
+.block-newsletter {
+    padding-bottom: 50px;
+}

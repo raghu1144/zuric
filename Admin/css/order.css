@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Roboto:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+section h1 {
+    font-family: 'Abel', sans-serif;
+    color: #545454;
+
+    /* font-family: 'Bellefair', serif; */
+
+}
+
+.formgroup {
+    position: relative;
+    font-family: 'Abel', sans-serif;
+    /* width: 20%; */
+}
+
+
+.formgroup i {
+
+    position: absolute;
+    right: 9%;
+    bottom: 11px;
+    font-size: 22px;
+}
+
+.formgroup .fromdate {
+    padding: 2px 15px;
+}
+
+.formgroup .todate {
+    padding: 2px 15px;
+}
+
+.form-select {
+    padding: 5px 7px;
+}
+
+.button-22 {
+
+
+    align-items: center;
+    appearance: button;
+    /* background-color: #0276FF; */
+    background-color: #CD8E33;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: "RM Neue", sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    padding: 10px 40px;
+    text-align: center;
+    text-transform: none;
+    transition: color .13s ease-in-out, background .13s ease-in-out, opacity .13s ease-in-out, box-shadow .13s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 31px;
+}
+
+/* .right{
+        margin-right: 9rem;
+    }
+    .leftlabel{
+        margin-left: -9rem;
+        
+    } */
+
+.button-22:active {
+    /* background-color: #006AE8; */
+    background-color: #f0a236;
+}
+
+.button-22:hover {
+    /* background-color: #1C84FF; */
+    background-color: #cf9544;
+}
+
+/* .margin{
+        margin-left: -9rem;
+
+    } */
+/* .Date{
+    width: 50%;
+} */
+.table1 table {
+    font-size: 18px;
+    color: black;
+    border-collapse: collapse;
+    font-family: 'Abel', sans-serif;
+    width: 100%;
+    font-weight: 400;
+}
+
+.table1 {
+    padding: 10px;
+}
+
+.table1 table td,
+th {
+    border: 1px solid black;
+    text-align: center !important;
+    padding: 3px 4px;
+}
+
+.SelectFilter {
+    width: 120%;
+    text-align: center;
+    border-radius: 5px;
+    height: 36px;
+
+}
