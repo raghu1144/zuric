@@ -50,66 +50,7 @@ body{
 
 <body>
 
-    <!-- form section start -->
-    <!-- <section class="w3l-workinghny-form background2">
-
-       
-        <div class="workinghny-form-grid">
-            <div class="wrapper">
-                <div class="logo ">
-                    
-                    <h1><a class="brand-logo" href="#"
-                            style="height: 220px;  width: auto; display: flex; justify-content: center;">
-                            <img src="./images/Transparent Logo.svg">
-                        </a></h1>
-                   
-                </div>
-                <div class="workinghny-block-grid" style="transform: translateY(-50px)" ;>
-                    <div class="form-right-inf">
-                        <h2>Sign-In </h2>
-
-                        <div class="login-form-content">
-                            <h3 style="text-align: left;">Username</h3>
-                            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" class="signin-form"
-                                method="POST">
-                                <div class="one-frm">
-                                    <input type="text" name="AdminName" placeholder="" required="" autofocus>
-                                </div>
-                                <h3 style="text-align: left;">Password</h3>
-                                <div class="one-frm">
-                                    <input type="password" name="AdminPass" placeholder="" required="">
-                                </div>
-
-
-                                <button class=" btn btn-style mt-3" style="background:#CD8E33 ;" type="submit"
-                                    name="Login">Login </button><br>
-
-
-                            </form>
-                            <form action="forget_pass_pop.php" class="signin-form" method="POST">
-
-                                <button class=" btn btn-style mt-3"
-                                    style="margin-top: 0px!important; background: none; color:black"
-                                    style="margin-top: 20px; " value="Forget your password?" name="send_mail"
-                                    type="submit">Forget your password?
-
-                                </button>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="copyright text-center">
-            <div class="wrapper">
-                <p class="copy-footer-29"><b>© 2022 Primo. Privacy policy</b></p>
-            </div>
-        </div>
-       
-
-    </section> -->
+    
     <div class="container">
         <div class="row">
             <div class="left">
@@ -159,81 +100,76 @@ body{
     </div>
 
     <?php
-    function input_filter($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
-if (isset($_POST['Login'])) {
-    $AdminName = $_POST['AdminName'];
-    $AdminPass = $_POST['AdminPass'];
-
-    // $AdminName = mysqli_real_escape_string($con, $AdminName, );
-    // $AdminPass = mysqli_real_escape_string($con, $AdminPass, );
-    
-    // $query = "SELECT * FROM user u
-    //          INNER JOIN user_xref ux
-    //          ON u.user_id = ux.user_id AND ux.type_id = 1002
-    //          WHERE u.email ='$AdminName' AND ux.password_text = '$AdminPass'";
-
-
-    $query = "SELECT * FROM `admin_login` WHERE `Admin_Name`= '$AdminName' AND `Admin_Password` = '$AdminPass' ";
-
-
-        //   echo $query;
-        //   die();   
-
-    //prepared statement
-    if ($stmt = mysqli_prepare($con, $query)) {
-        // mysqli_stmt_bind_param($stmt, "ss", $AdminName, $AdminPass); // binding value to template
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_store_result($stmt);
-        if (mysqli_stmt_num_rows($stmt) == 1) {
-
-            session_start();
-            $_SESSION['AdminLoginId'] = $AdminName;
-            
-            echo "
-            <script> 
-             window.location.href = 'index.php';
-            </script>
-            ";
-            // header("Location: index.php");
-
-        } else {
-            echo "<script> alert('Invalid Username and Password')</script>";
+        function input_filter($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
         }
-        mysqli_stmt_close($stmt);
-    } else {
-        echo "sql prepared query error";
-    }
-}
 
-?>
+        if (isset($_POST['Login'])) {
+            $AdminName = $_POST['AdminName'];
+            $AdminPass = $_POST['AdminPass'];
+
+            // $AdminName = mysqli_real_escape_string($con, $AdminName, );
+            // $AdminPass = mysqli_real_escape_string($con, $AdminPass, );
+            
+            // $query = "SELECT * FROM user u
+            //          INNER JOIN user_xref ux
+            //          ON u.user_id = ux.user_id AND ux.type_id = 1002
+            //          WHERE u.email ='$AdminName' AND ux.password_text = '$AdminPass'";
+
+
+            $query = "SELECT * FROM `admin_login` WHERE `Admin_Name`= '$AdminName' AND `Admin_Password` = '$AdminPass' ";
+
+            //prepared statement
+            if ($stmt = mysqli_prepare($con, $query)) {
+                // mysqli_stmt_bind_param($stmt, "ss", $AdminName, $AdminPass); // binding value to template
+                mysqli_stmt_execute($stmt);
+                mysqli_stmt_store_result($stmt);
+                if (mysqli_stmt_num_rows($stmt) == 1) {
+
+                    session_start();
+                    $_SESSION['AdminLoginId'] = $AdminName;
+                    
+                    echo "
+                    <script> 
+                    window.location.href = 'index.php';
+                    </script>
+                    ";
+                    // header("Location: index.php");
+
+                } else {
+                    echo "<script> alert('Invalid Username and Password')</script>";
+                }
+                mysqli_stmt_close($stmt);
+            } else {
+                echo "sql prepared query error";
+            }
+        }
+    ?>
     <script src="../sweetalert.min.js"></script>
 
     <?php
-if (isset($_SESSION['status']) && $_SESSION['status'] != '') {
+        if (isset($_SESSION['status']) && $_SESSION['status'] != '') {
+            ?>
+
+            <script>
+                swal({
+                    title: "Reset Link ",
+                    text: "Reset link has been sent to your registered email id.",
+                    icon: "success",
+                    button: "ok",
+
+                });
+            </script>
+            <?php
+
+            unset($_SESSION['status']);
+        }
+
     ?>
-
     <script>
-        swal({
-            title: "Reset Link ",
-            text: "Reset link has been sent to your registered email id.",
-            icon: "success",
-            button: "ok",
-
-        });
-    </script>
-    <?php
-
-    unset($_SESSION['status']);
-}
-
-?>
-<script>
         const togglePassword = document.querySelector("#togglePassword");
         const password = document.querySelector("#password");
 

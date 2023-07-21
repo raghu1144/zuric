@@ -558,27 +558,9 @@
                         </div>
                         
                     </button>
-                    <!-- <div class="dropdown-content" style="background-color: #f9f9f9">
-                        <a href="./profilefile.php">My Profile</a>
-                        <a href="./Products/logout.php">Logout</a>
-                    </div> -->
+                    
                     <div class="dropdownew" id="box1">
                         <div class=" topbox d-flex flex-column">
-                            <?php 
-                                // if(isset($_SESSION['AdminLoginId']))
-                                // {
-                                //     $img_query = "SELECT `image` FROM `admin_login`";
-                                //     $run_query = mysqli_query($con, $img_query);
-                                    
-                                //     if($result = mysqli_num_rows($run_query) > 0){
-                                //         $row_result= mysqli_fetch_assoc($result);
-                                        
-                                //     }else{
-                                //         echo "Image not found";
-                                //     }
-
-                                // }
-                            ?>
                             <div class="picture">
                                 <?php
                                     $name_image = $_SESSION['AdminLoginId'];
